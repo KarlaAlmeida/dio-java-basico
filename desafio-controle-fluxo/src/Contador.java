@@ -1,5 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Contador {
     public static void main(String[] args) {
@@ -13,22 +14,26 @@ public class Contador {
 			//chamando o método contendo a lógica de contagem
 			contar(parametroUm, parametroDois);
 		
-		}catch (IllegalArgumentException e) {
-			System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+		}catch (ParametrosInvalidosException e) {
+			e.printStackTrace();
 		}
     }
 
-    public static void contar(int parametroUm, int parametroDois ) throws IllegalArgumentException {
+    public static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException{
 		
 		//validar se parametroUm é MAIOR que parametroDois e lançar a exceção
-		 if (parametroUm > parametroDois) {
-    			 throw new IllegalArgumentException("O segundo parâmetro deve ser maior que o primeiro.");
- 		 }
+		try{
+            if (parametroUm > parametroDois) {
+                throw new ParametrosInvalidosException();
+         }
+        }catch (ParametrosInvalidosException e) {
+			e.printStackTrace();
+		}
+        
 		
 		//realizar o for para imprimir os números com base na variável contagem
 		int contagem = parametroDois - parametroUm;	
-        //int numero = parametroUm;
-		for (int i = 0; i < contagem; i++){
+       	for (int i = 0; i < contagem; i++){
             System.out.println("Imprimindo o número " + parametroUm);
             parametroUm++;
 		}
