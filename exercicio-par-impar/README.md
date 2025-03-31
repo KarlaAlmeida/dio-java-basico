@@ -1,4 +1,4 @@
-## Exemplo de uma classe para representar uma SmartTV
+## Números pares ou ímpares dentro de um intervalo
 
 Este exercício teve como objetivo treinar habilidades em estruturas de controle em Java no curso de Java Básico da DIO.
 
