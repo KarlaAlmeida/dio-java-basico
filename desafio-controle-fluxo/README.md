@@ -4,4 +4,4 @@ Este projeto tem como objetivo criar um contador que representa a quantidade de 
 ## Objetivos
 
 * Receber dois parâmetros via terminal que representarão dois números inteiros, e realizar uma interação com x ocorrências (diferença entre o dois parâmetros)  para imprimir os números.
-* Se o primeiro parâmetro for MAIOR que o segundo parâmetro, lançar uma exceção IllegalArgumentException com a mensagem: "O segundo parâmetro deve ser maior que o primeiro".
+* Se o primeiro parâmetro for MAIOR que o segundo parâmetro, lançar uma exceção customizada chamada de ParametrosInvalidosException com a mensagem: "O segundo parâmetro deve ser maior que o primeiro".
